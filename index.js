@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
-let myBalance = 100; //Dollar
+let myBalance = 20000; //Dollar
 let myPincode = 2005;
 let pinAnswer = await inquirer.prompt([{
         name: "pin",
