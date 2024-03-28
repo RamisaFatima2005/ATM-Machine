@@ -1,6 +1,6 @@
 {
   "name": "cash-amount-atm_machine",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "This is CLI based ATM Machine",
   "main": "index.js",
   "type": "module",

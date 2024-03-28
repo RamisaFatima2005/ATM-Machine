@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
-let myBalance = 20000; //Dollar
+let myBalance = 100; //Dollar
 let myPincode = 2005;
 let pinAnswer = await inquirer.prompt([{
         name: "pin",
@@ -45,20 +45,40 @@ if (pinAnswer.pin === myPincode) {
             }
         ]);
         if (fastCash.Cash === "1000") {
-            myBalance -= fastCash.Cash;
-            console.log(`Your remaining balance is ${myBalance}`);
+            if (fastCash.Cash >= myBalance) {
+                console.log(`Insufficient Balance!Your current balance is ${myBalance}`);
+            }
+            else {
+                myBalance -= fastCash.Cash;
+                console.log(`Your remaining balance is ${myBalance}`);
+            }
         }
-        else if (fastCash.Cash === "2000") {
-            myBalance -= fastCash.Cash;
-            console.log(`Your remaining balance is ${myBalance}`);
+        if (fastCash.Cash === "2000") {
+            if (fastCash.Cash >= myBalance) {
+                console.log(`Insufficient Balance!Your current balance is ${myBalance}`);
+            }
+            else {
+                myBalance -= fastCash.Cash;
+                console.log(`Your remaining balance is ${myBalance}`);
+            }
         }
-        else if (fastCash.Cash === "5000") {
-            myBalance -= fastCash.Cash;
-            console.log(`Your remaining balance is ${myBalance}`);
+        if (fastCash.Cash === "5000") {
+            if (fastCash.Cash >= myBalance) {
+                console.log(`Insufficient Balance!Your current balance is ${myBalance}`);
+            }
+            else {
+                myBalance -= fastCash.Cash;
+                console.log(`Your remaining balance is ${myBalance}`);
+            }
         }
-        else if (fastCash.Cash === "10000") {
-            myBalance -= fastCash.Cash;
-            console.log(`Your remaining balance is ${myBalance}`);
+        if (fastCash.Cash === "10000") {
+            if (fastCash.Cash >= myBalance) {
+                console.log(`Insufficient Balance!Your current balance is ${myBalance}`);
+            }
+            else {
+                myBalance -= fastCash.Cash;
+                console.log(`Your remaining balance is ${myBalance}`);
+            }
         }
     }
 }
